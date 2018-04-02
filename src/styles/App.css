@@ -1,0 +1,16 @@
+.App {
+    height: 100vh;
+}
+
+.App .container {
+    height: 100%;
+}
+
+.row-4 {
+    min-height: 10%;
+    padding-top: 25px;
+}
+
+.row-4 .text-muted {
+    padding-top: 10px;
+}
