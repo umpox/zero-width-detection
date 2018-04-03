@@ -7,6 +7,7 @@
 }
 
 .row-4 {
+    position: relative;
     min-height: 10%;
     padding-top: 25px;
 }
@@ -16,11 +17,11 @@
 }
 
 .github-star {
-    width: 125px;
+    width: 115px;
     height: 30px;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 25px;
+    right: 0px;
 }
 
 @media (max-width: 500px) {

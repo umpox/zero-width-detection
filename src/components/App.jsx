@@ -43,8 +43,8 @@ class App extends Component {
     return (
       <div className="App">
         <div className="container">
-          <GithubStar />
           <div className="row-4">
+            <GithubStar />
             <h2>1: Enter username:</h2>
             <UsernameInput
               username={this.state.username}
