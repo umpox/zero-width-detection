@@ -13,7 +13,7 @@ const binaryToZeroWidth = binary => (
       return '‌'; // invisible &#8204;
     }
     return '‍'; // invisible &#8205;
-  }).join('') // invisible &#65279;
+  }).join('﻿') // invisible &#65279;
 );
 
 export default (username) => {

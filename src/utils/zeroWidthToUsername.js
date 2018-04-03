@@ -1,5 +1,5 @@
 const zeroWidthToBinary = string => (
-  string.split('').map((char) => { // invisible &#65279;
+  string.split('﻿').map((char) => { // invisible &#65279;
     if (char === '​') { // invisible &#8203;
       return '1';
     } else if (char === '‌') { // invisible &#8204;
