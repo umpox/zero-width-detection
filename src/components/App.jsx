@@ -35,7 +35,7 @@ class App extends Component {
     const zeroWidthUsername = confidentialInformation.replace(this.state.confidentialText, '');
     this.setState({
       revealedUsername: zeroWidthToUsername(zeroWidthUsername),
-      dontBelieve: "Don't believe me? Try pasting the text here again in a different browser or through incognito mode.",
+      dontBelieve: "Don't believe me? Try pasting the text here again in a different browser or through incognito mode. ",
     });
   }
 
@@ -74,6 +74,9 @@ class App extends Component {
             {this.state.dontBelieve &&
               <p className="text-muted">
                 {this.state.dontBelieve}
+                <a href="https://medium.com/@umpox/be-careful-what-you-copy-invisibly-inserting-usernames-into-text-with-zero-width-characters-18b4e6f17b66">
+                  How does this work?
+                </a>
               </p>
             }
           </div>
