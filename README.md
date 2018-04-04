@@ -12,3 +12,7 @@ A project to demonstrate the vulnerabilities of copying text that may have zero-
 [src/utils/usernameToZeroWidth.js](https://github.com/umpox/zero-width-detection/blob/master/src/utils/usernameToZeroWidth.js)
 
 [src/utils/zeroWidthToUsername.js](https://github.com/umpox/zero-width-detection/blob/master/src/utils/zeroWidthToUsername.js)
+
+## Related
+
+- [`zero-width-encoding-cli`](https://github.com/allanbreyes/zero-width-encoding-cli): a CLI to encode or decode zero-width character messages
