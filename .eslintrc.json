@@ -5,6 +5,7 @@
         "node": true
     },
     "rules": {
-        "jsx-a11y/href-no-hash": "off"
+        "jsx-a11y/href-no-hash": "off",
+        "no-irregular-whitespace": "off"
     }
 }

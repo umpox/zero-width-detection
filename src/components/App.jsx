@@ -31,17 +31,8 @@ class App extends Component {
   }
 
   revealUsername(event) {
-    let confidentialInformation;
-    let zeroWidthUsername;
-
-    if (event.target.value === "There's a​﻿‌﻿​﻿‌﻿‌﻿​﻿‌﻿‍﻿‌﻿​﻿​﻿‌﻿‌﻿​﻿‌﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿​﻿​﻿‌﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿‌﻿‌﻿‌﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿​﻿‌﻿‌﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿​﻿​﻿​﻿‌﻿‍﻿‌﻿‌﻿​﻿‌﻿‌﻿‌﻿‌﻿‌﻿‍﻿‌﻿​﻿‌﻿​﻿‌﻿​﻿​﻿‌﻿‍﻿‌﻿​﻿​﻿‌﻿​﻿‌﻿‌﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿‌﻿​﻿​﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿​﻿‌﻿‌﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿​﻿​﻿‌﻿‌﻿‍﻿‌﻿​﻿​﻿‌﻿‌﻿‌﻿‌﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿​﻿​﻿​﻿‌﻿‍﻿‌﻿​﻿​﻿​﻿‌﻿​﻿‌﻿‌ Hidden Message in This Headline") {
-      // Temporary
-      confidentialInformation = event.target.value.replace("There's a", '');
-      zeroWidthUsername = confidentialInformation.replace(' Hidden Message in This Headline', '');
-    } else {
-      confidentialInformation = event.target.value.replace(this.state.confidentialHeading, '');
-      zeroWidthUsername = confidentialInformation.replace(this.state.confidentialText, '');
-    }
+    // Replace all text except zero width characters
+    const zeroWidthUsername = event.target.value.replace(/[^​‌‍﻿]/g, '');
 
     this.setState({
       revealedUsername: zeroWidthToUsername(zeroWidthUsername),
