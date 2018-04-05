@@ -31,8 +31,18 @@ class App extends Component {
   }
 
   revealUsername(event) {
-    const confidentialInformation = event.target.value.replace(this.state.confidentialHeading, '');
-    const zeroWidthUsername = confidentialInformation.replace(this.state.confidentialText, '');
+    let confidentialInformation;
+    let zeroWidthUsername;
+
+    if (event.target.value === "There's a​﻿‌﻿​﻿‌﻿‌﻿​﻿‌﻿‍﻿‌﻿​﻿​﻿‌﻿‌﻿​﻿‌﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿​﻿​﻿‌﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿‌﻿‌﻿‌﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿​﻿‌﻿‌﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿​﻿​﻿​﻿‌﻿‍﻿‌﻿‌﻿​﻿‌﻿‌﻿‌﻿‌﻿‌﻿‍﻿‌﻿​﻿‌﻿​﻿‌﻿​﻿​﻿‌﻿‍﻿‌﻿​﻿​﻿‌﻿​﻿‌﻿‌﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿‌﻿​﻿​﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿​﻿‌﻿‌﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿​﻿​﻿‌﻿‌﻿‍﻿‌﻿​﻿​﻿‌﻿‌﻿‌﻿‌﻿​﻿‍﻿‌﻿​﻿​﻿‌﻿​﻿​﻿​﻿‌﻿‍﻿‌﻿​﻿​﻿​﻿‌﻿​﻿‌﻿‌ Hidden Message in This Headline") {
+      // Temporary
+      confidentialInformation = event.target.value.replace("There's a", '');
+      zeroWidthUsername = confidentialInformation.replace(' Hidden Message in This Headline', '');
+    } else {
+      confidentialInformation = event.target.value.replace(this.state.confidentialHeading, '');
+      zeroWidthUsername = confidentialInformation.replace(this.state.confidentialText, '');
+    }
+
     this.setState({
       revealedUsername: zeroWidthToUsername(zeroWidthUsername),
       dontBelieve: "Don't believe me? Try pasting the text here again in a different browser or through incognito mode. ",
