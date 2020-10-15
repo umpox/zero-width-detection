@@ -43,8 +43,6 @@ const styles = {
   `,
 };
 
-console.log('test', 'lol');
-
 const App = () => {
   const [hiddenUsername, setHiddenUsername] = useState('');
   const [revealedUsername, setRevealedUsername] = useState('');
@@ -69,7 +67,7 @@ const App = () => {
 
         <div css={styles.row}>
           <h2>2: Copy text below</h2>
-          <TextHighlight>
+          <TextHighlight testId="confidentialText">
             Confidential Announcement: {hiddenUsername}
             This is some confidential text that you really shouldn't be sharing anywhere else.
           </TextHighlight>
@@ -77,12 +75,12 @@ const App = () => {
 
         <div css={styles.row}>
           <h2>3: Paste copied text here:</h2>
-          <TextInput onChange={revealUsername} />
+          <TextInput ariaLabel="Hidden Username" onChange={revealUsername} />
         </div>
 
         <div css={styles.row}>
           <h2>4: Your username is...</h2>
-          <TextHighlight css={styles.usernameReveal}>{revealedUsername}</TextHighlight>
+          <TextHighlight testId="revealedUsername" css={styles.usernameReveal}>{revealedUsername}</TextHighlight>
           {revealedUsername && (
             <p css={styles.muted}>
               Don't believe me? Try pasting the text here again in a different browser or through incognito mode.

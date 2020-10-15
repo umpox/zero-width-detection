@@ -4,6 +4,7 @@ import { css } from '@emotion/core';
 interface TextInputProps {
   onChange: (value: string) => void;
   placeholder?: string;
+  ariaLabel?: string;
 }
 
 const style = css`
@@ -19,12 +20,12 @@ const style = css`
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 `;
 
-export const TextInput: React.FC<TextInputProps> = ({ onChange, placeholder }) => (
+export const TextInput: React.FC<TextInputProps> = ({ onChange, placeholder, ariaLabel = "Username" }) => (
   <input
     css={style}
     onChange={event => onChange(event.target.value)}
     type="text"
     placeholder={placeholder}
-    aria-label="Username"
+    aria-label={ariaLabel}
   />
 );
