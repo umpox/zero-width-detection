@@ -15,10 +15,11 @@ const style = css`
 interface TextHighlightProps {
   /** Allows custom styling through Emotion */
   className?: string;
+  testId?: string;
 }
 
-export const TextHighlight: React.FC<TextHighlightProps> = ({ children, className }) => (
-  <div css={style} className={className}>
+export const TextHighlight: React.FC<TextHighlightProps> = ({ children, className, testId }) => (
+  <div css={style} className={className} data-testid={testId}>
     <p>{children}</p>
   </div>
 );
