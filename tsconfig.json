@@ -1,0 +1,14 @@
+{
+  "include": ["./*.tsx", "src"],
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "module": "es6",
+    "jsx": "react",
+    "target": "es2019",
+    "moduleResolution": "node"
+  }
+}

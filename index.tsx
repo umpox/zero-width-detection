@@ -1,6 +1,7 @@
-/* eslint-disable react/jsx-filename-extension */
+import 'react-hot-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+
+import App from './src/App';
 
 ReactDOM.render(<App />, document.getElementById('root'));

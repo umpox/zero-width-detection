@@ -4,23 +4,38 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.35",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17",
-    "prop-types": "^15.6.0"
+    "react-dom": "^16.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "dev": "webpack serve",
+    "build": "webpack",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.12.0",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.12.0",
+    "@emotion/babel-preset-css-prop": "^10.0.27",
+    "@types/react": "^16.9.52",
+    "@types/react-dom": "^16.9.8",
+    "babel-loader": "^8.1.0",
+    "core-js": "^3.6.5",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.5.1",
-    "gh-pages": "^1.1.0"
+    "gh-pages": "^1.1.0",
+    "html-webpack-plugin": "^4.5.0",
+    "prettier": "2.1.2",
+    "react-hot-loader": "^4.13.0",
+    "typescript": "^4.0.3",
+    "webpack": "^5.1.1",
+    "webpack-cli": "^4.0.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-hot-middleware": "^2.25.0"
   }
 }
