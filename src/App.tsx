@@ -66,7 +66,7 @@ const App = () => {
         </div>
 
         <div css={styles.row}>
-          <h2>2: Copy text below</h2>
+          <h2>2: Copy text below!</h2>
           <TextHighlight testId="confidentialText">
             Confidential Announcement: {hiddenUsername}
             This is some confidential text that you really shouldn't be sharing anywhere else.
