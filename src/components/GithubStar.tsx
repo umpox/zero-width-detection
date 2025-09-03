@@ -13,6 +13,12 @@ const style = css`
   }
 `;
 
+/**
+ * GitHub star button component that displays an embedded GitHub star button
+ * Shows star count for the zero-width-detection repository
+ * Hidden on mobile devices (max-width: 500px)
+ * @returns Embedded iframe containing GitHub star button
+ */
 export const GithubStar = () => (
   <iframe
     title="github"

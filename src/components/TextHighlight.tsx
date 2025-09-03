@@ -18,6 +18,15 @@ interface TextHighlightProps {
   testId?: string;
 }
 
+/**
+ * A styled container component for highlighting text content with a gray background
+ * Used to display text that may contain hidden zero-width characters
+ * @param props - Component props
+ * @param props.children - Content to display inside the highlighted container
+ * @param props.className - Optional CSS class name for additional styling
+ * @param props.testId - Optional test ID for testing purposes
+ * @returns Styled div container with highlighted background
+ */
 export const TextHighlight: React.FC<TextHighlightProps> = ({ children, className, testId }) => (
   <div css={style} className={className} data-testid={testId}>
     <p>{children}</p>

@@ -43,12 +43,27 @@ const styles = {
   `,
 };
 
+/**
+ * Main application component demonstrating zero-width character vulnerability
+ * Provides a 4-step process: enter username, copy text with hidden characters,
+ * paste text elsewhere, and reveal the hidden username
+ * @returns Main application JSX with the complete user interface
+ */
 const App = () => {
   const [hiddenUsername, setHiddenUsername] = useState('');
   const [revealedUsername, setRevealedUsername] = useState('');
 
+  /**
+   * Converts username to zero-width characters and updates hidden username state
+   * @param username - The username to encode with zero-width characters
+   */
   const transformUsername = (username: string) => setHiddenUsername(usernameToZeroWidth(username));
 
+  /**
+   * Extracts zero-width characters from pasted text and reveals the hidden username
+   * Filters out all visible characters, keeping only zero-width Unicode characters
+   * @param username - Text that may contain hidden zero-width characters
+   */
   const revealUsername = (username: string) => {
     // Replace all text except zero width characters
     const zeroWidthUsername = username.replace(/[^​‌‍﻿]/g, '');

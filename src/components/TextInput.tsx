@@ -20,6 +20,14 @@ const style = css`
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 `;
 
+/**
+ * A styled text input component with customizable placeholder and accessibility label
+ * @param props - Component props
+ * @param props.onChange - Callback function called when input value changes
+ * @param props.placeholder - Optional placeholder text for the input
+ * @param props.ariaLabel - Accessibility label for screen readers (defaults to "Username")
+ * @returns Styled text input element
+ */
 export const TextInput: React.FC<TextInputProps> = ({ onChange, placeholder, ariaLabel = "Username" }) => (
   <input
     css={style}
